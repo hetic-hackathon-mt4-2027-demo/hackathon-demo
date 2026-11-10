@@ -11,6 +11,7 @@ try {
 const { DATABASE_URL, AI_BASE_URL, AI_MODEL, AI_API_KEY = '' } = process.env;
 const PORT = Number(process.env.PORT ?? 3000);
 
+// Creation de la connexion BDD
 const db = new pg.Pool({ connectionString: DATABASE_URL });
 const app = express();
 app.use(express.json());
